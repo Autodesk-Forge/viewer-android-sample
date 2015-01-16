@@ -27,9 +27,13 @@ public class ResponseClass {
 		
 		 @SerializedName("id")
 		    public String id; 
+		 @SerializedName("location")
+		    public String location; 
 		 
 
 	}
+	
+	
 	
 	
 }

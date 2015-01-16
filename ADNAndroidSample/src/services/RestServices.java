@@ -40,9 +40,11 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.FileEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.ByteArrayBody;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.AbstractHttpClient;
 import org.apache.http.impl.client.BasicCookieStore;
@@ -71,14 +73,14 @@ import com.google.gson.Gson;
 
 public class RestServices { 
 	 
-	//private static String BASEUrl = "https://developer.api.autodesk.com";
-	private static String BASEUrl = main.Credentials.BASEUrl;
-	private static String authenticate_srv = "/authentication/v1/authenticate";
-	private static String upload_srv = "/oss/v1/buckets";
-	private static String settoken_srv = "/utility/v1/settoken";
-	private static String register_srv = "/viewingservice/v1/register";
-	private static String get_urn_thumb_srv = "/viewingservice/v1/thumbnails";
- 
+//private static String BASEUrl = "https://developer.api.autodesk.com";
+private static String BASEUrl = main.Credentials.BASEUrl;
+private static String authenticate_srv = "/authentication/v1/authenticate";
+private static String upload_srv = "/oss/v1/buckets";
+private static String settoken_srv = "/utility/v1/settoken";
+private static String register_srv = "/viewingservice/v1/register";
+private static String get_urn_thumb_srv = "/viewingservice/v1/thumbnails";
+	                                         
 	
 	static  CookieStore globalcookies = null;
 	
@@ -140,9 +142,11 @@ public class RestServices {
 					 ResponseClass.srv_authenticate_class _login_cls = gson.fromJson(reader, ResponseClass.srv_authenticate_class.class);
 					 
 					 GlobalHelper._currentToken = _login_cls.access_token;
+					 
+					 
 
-					 //if(!srv_settoken())
-					//	 return false;
+					 if(!srv_settoken())
+						 return false;
 					 
 					 return true;
 				 }
@@ -330,26 +334,24 @@ public class RestServices {
 			try
 			{   
 				 
+				//get file from SD card
 				 File toWrite = new File(fileName);
 				  if(!toWrite.exists())
-	        	  {
+				  {
 					   return false;
-	        	  }				  
+				  }				  
 				 
 				 String thisurl = 
-						 BASEUrl + upload_srv + "/" + bucketName+ "/objects/" + toWrite.getName();
+						 BASEUrl + upload_srv + "/" + bucketName+ "/objects/" + toWrite.getName(); 
 				 
-				 InputStream in = new BufferedInputStream(new FileInputStream(toWrite));
-				 byte[] bArray = new byte[(int) toWrite.length()];
-				 in.read(bArray);
-				 String entity = Base64.encodeToString(bArray, Base64.DEFAULT); 
-				 
-				 HttpPut request = new HttpPut(thisurl);			 
-				 
-				 StringEntity  se = new StringEntity(entity);
-				 request.setEntity(se);				 
-				 request.setHeader("Content-Type", "image/vnd.dwg"); 
-				 
+				 // Required, accepts any content-type except multipart/form-data.  
+				 FileEntity entity = new FileEntity(toWrite,"application/stream");	 
+				 HttpPut request = new HttpPut(thisurl);						  		
+				 request.setEntity(entity); 
+				 //must set although help reference says it could be ignored.
+				 request.addHeader("Content-Type", "application/stream"); 
+			 
+				 //request.setHeader("Content-Length",Long.toString(toWrite.length())); 
 			 
 				 HttpClient httpclient =  getNewHttpClient();				 
 				 HttpContext localContext = new BasicHttpContext();
@@ -361,16 +363,16 @@ public class RestServices {
 			 
 				 StatusLine statusLine = response.getStatusLine();
 				 if(statusLine.getStatusCode() == HttpStatus.SC_OK || statusLine.getStatusCode() == 201)
-				 {	    
-					 //succeeded
-					 //get response json data
+				 {	    		 
+		 			//succeeded
+					//get response json data
 					 HttpEntity getResponseEntity = response.getEntity();
 					 Reader reader = new InputStreamReader(getResponseEntity.getContent());
 					 Gson gson = new Gson();
 					 
 					 ResponseClass.srv_bucket_class _bucket_cls = gson.fromJson(reader, ResponseClass.srv_bucket_class.class);
 					 String _urn = android.util.Base64.encodeToString(_bucket_cls.objects[0].id.getBytes(),Base64.NO_WRAP);; 
-
+ 
 					 GlobalHelper._currentUrn = _urn;
 			  		 
 					 return true;
@@ -404,8 +406,7 @@ public class RestServices {
 		public static Boolean srv_register_model(String thisUrn) 
 		{	 
 			try
-			{   
-				 
+			{    
 				 String thisurl = BASEUrl + register_srv; 				 
 				 HttpPost request = new HttpPost(thisurl);
 				 			 
@@ -467,7 +468,7 @@ public class RestServices {
 		public static Bitmap srv_get_bubble_thumb(String thisUrn) 
 		{	 
 			try
-			{     
+			{   
 				 String thisurl = BASEUrl + get_urn_thumb_srv + "/"+ thisUrn; 				 
 				 HttpGet request = new HttpGet(thisurl); 
 			    
