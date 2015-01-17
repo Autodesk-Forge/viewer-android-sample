@@ -98,9 +98,9 @@
         android:id="@+id/showthumbnail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_below="@+id/txtviewregisterstatus"      
-             android:layout_alignLeft="@+id/gettoken"  
-        android:text="Show Thumnail" />
+        android:layout_alignLeft="@+id/gettoken"
+        android:layout_below="@+id/txtviewregisterstatus"
+        android:text="Show Thumbnail" />
 
     <ImageView
         android:id="@+id/imageView1"
