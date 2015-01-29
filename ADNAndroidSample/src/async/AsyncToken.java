@@ -19,7 +19,7 @@ public class AsyncToken extends AsyncTask<List<String>, Void, Void>{
 	//indicate whether the task completed
     private Boolean _isOK = false;
    
-  //ini progress dialog
+  //initialize progress dialog
   	private ProgressDialog progress;
   	  public AsyncToken(ProgressDialog progress) {
   		    this.progress = progress;
