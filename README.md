@@ -31,6 +31,7 @@ This is a sample for Android devices demoing the partial workflow of using Autod
 * Click [Upload Model], wait for the success info >> the urn will appear in the text box below
 * Click [Register Model] >> wait for the success info >> the text below will show the register status
 * Click [show thumbnail] >> the thumbnail will appear in the image box
+* Click [Launch Viewer] >> select a browser, the model will be displayed in it. This test uses Chrome (version 38.0.2125.114), while you can try to load the model using any browser that is WebGL compatible.
 
  
 ## License
