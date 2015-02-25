@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/gettoken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="Get Token" />
@@ -27,8 +27,8 @@
        
          <Button
              android:id="@+id/createbucket"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_width="180dp"
+             android:layout_height="40dp"
              android:layout_alignLeft="@+id/gettoken"
              android:layout_below="@+id/textViewToken"
              android:text="Create Bucket" />
@@ -47,8 +47,8 @@
        
         <Button
         android:id="@+id/btnBrowserModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"  
+        android:layout_width="180dp"
+        android:layout_height="40dp" 
          android:layout_below="@+id/txtViewBucketName"    
               android:layout_alignLeft="@+id/gettoken" 
         android:layout_marginBottom="15dp"
@@ -64,8 +64,8 @@
         
          <Button
              android:id="@+id/uploadmodel"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_width="180dp"
+             android:layout_height="40dp"
              android:layout_alignLeft="@+id/gettoken"
              android:layout_below="@+id/txtViewModelName"
              android:text="Upload Model" />
@@ -80,8 +80,8 @@
     
         <Button
             android:id="@+id/btnpostbubble"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
             android:layout_alignLeft="@+id/gettoken"
             android:layout_below="@+id/textViewUrn"
             android:text="Register Model" />
@@ -96,8 +96,8 @@
      
     <Button
         android:id="@+id/showthumbnail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
         android:layout_alignLeft="@+id/gettoken"
         android:layout_below="@+id/txtviewregisterstatus"
         android:text="Show Thumbnail" />
@@ -109,5 +109,16 @@
         android:layout_below="@+id/showthumbnail"      
              android:layout_alignLeft="@+id/gettoken" 
         android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/displaymodel"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/showthumbnail"
+        android:text="Launch Viewer>>" />
 
 </RelativeLayout>

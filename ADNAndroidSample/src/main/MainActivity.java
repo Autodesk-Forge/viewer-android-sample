@@ -14,6 +14,7 @@ import async.AsyncGetThumbnail;
 import async.AsyncRegisterModel;
 import async.AsyncToken;
 import async.AsyncUpload;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Activity;
@@ -44,6 +45,7 @@ public class MainActivity extends Activity {
 	private  Button btn_upload_model;
 	private  Button btn_register_model;
 	private  Button btn_show_thumbnail;
+	private  Button btn_launch_view; 
 	 
 	
 	
@@ -61,6 +63,7 @@ public class MainActivity extends Activity {
 		btn_register_model =(Button)findViewById(R.id.btnpostbubble);		
 		btn_show_thumbnail = (Button)findViewById(R.id.showthumbnail);
 		btn_browser_model =  (Button)findViewById(R.id.btnBrowserModel);
+		btn_launch_view = (Button)findViewById(R.id.displaymodel);
 		
 		//get token button
 		btn_get_token.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +182,31 @@ public class MainActivity extends Activity {
 	        	 
 	          }  //onClick
 			});   
+		
+		//launch model in the browser
+		btn_launch_view.setOnClickListener(new View.OnClickListener(){
+	        public void onClick(View v) { 
+	        	
+	        	TextView urntxt = (TextView)findViewById(R.id.textViewUrn);
+	        	 TextView tokentxt = (TextView)findViewById(R.id.textViewToken);
+	        	
+	        	//build the url using helper page provided by DevTech, ADN
+	        	 //format:
+	        	 //http://viewer.autodesk.io/node/view-helper?urn=someUrn&token=yourGeneratedToken
+	        	String viewUrl = "http://viewer.autodesk.io/node/view-helper?";
+	        	viewUrl = viewUrl + "urn=" + urntxt.getText().toString();
+	        	viewUrl = viewUrl + "&token=" + tokentxt.getText().toString();
+	        	
+	        	//start the browser activity
+	        	Intent viewModelIntent = new 
+	        	 Intent("android.intent.action.VIEW",Uri.parse(viewUrl));
+	        	startActivity(viewModelIntent);
+	        	
+	        	// select the browser that is WebGL compatible.
+	        	// the model should be displayed in the browser.
+	           }
+	        });
+		
 		
 	}//end of OnCreate
 	
@@ -308,6 +336,8 @@ public class MainActivity extends Activity {
 	    dialog = builder.show();
 	    return dialog;
 	}
+	
+	
 
 	
 	@Override  
