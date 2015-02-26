@@ -10,6 +10,7 @@ This is a sample for Android devices demoing the partial workflow of using Autod
 * Upload model
 * Start translation (registration)
 * Get thumbnail of model
+* display model in the browswer
 
 ##Dependencies
 
@@ -30,7 +31,7 @@ This is a sample for Android devices demoing the partial workflow of using Autod
 * Click [Browser Model], the files available in the storage folder will appear >> select one of them
 * Click [Upload Model], wait for the success info >> the urn will appear in the text box below
 * Click [Register Model] >> wait for the success info >> the text below will show the register status
-* Click [show thumbnail] >> the thumbnail will appear in the image box
+* Click [show thumbnail] >> the thumbnail will appear in the image box. sometimes you would need to wait a moment and click it again as transition might not have completed.
 * Click [Launch Viewer] >> select a browser, the model will be displayed in it. This test uses Chrome (version 38.0.2125.114), while you can try to load the model using any browser that is WebGL compatible.
 
  
