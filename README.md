@@ -19,7 +19,7 @@ This is a sample for Android devices demoing the partial workflow of using Autod
 
 ##Setup/Usage Instructions
 
-* Download and install Eclipse and Android Development Tool-kit;
+* Download and install Eclipse and [Android Development Tool-kit](http://developer.android.com/sdk/installing/installing-adt.html#Configure);
 * Download and install Android SDK API 18 or above from Android SDK Manager, this sample targets API 18.
 * Import the source code from "existing Android code into Workspaces" in Eclipse by clicking file -> Import, browse to the project folder, make sure the "project to Import" appears, and click "finish" button to import the project. 
 * Get your consumer key and secret key from http://developer.autodesk.com
