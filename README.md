@@ -3,14 +3,14 @@
 
 ##Description
 
-This is a sample for Android devices demoing the partial workflow of using Autodesk View and Data API:
+This is a sample for Android devices demoing workflow of using Autodesk View and Data API:
 
 * Get token and set token
 * Create bucket
 * Upload model
 * Start translation (registration)
 * Get thumbnail of model
-* display model in the browswer
+* Display model in the browser
 
 ##Dependencies
 
@@ -24,10 +24,10 @@ This is a sample for Android devices demoing the partial workflow of using Autod
 * Import the source code from "existing Android code into Workspaces" in Eclipse by clicking file -> Import, browse to the project folder, make sure the "project to Import" appears, and click "finish" button to import the project. 
 * Get your consumer key and secret key from http://developer.autodesk.com
 * Set the API keys in \src\main\Credentials.java
-* Build the project to generate the *.apk
-* Deploy the *.apk to a mobile device. If you prefer to use an emulator, you can create any Android virtual device from Android Virtual Device Manager, please be sure to use API level 18 or above and choose a device with bigger screen.
-* Open the App on android device, click [Get Token] >> token should appear in the text box below
-* Input bucket name in text box under [create bucket], click [Create Bucket] >> wait for the success info. The bucket name should be in lower case or numbers, and bucket name should not be duplicated with others, so a best practice is include your company name and current time stamp as a test bucket name.
+* Build the project to generate the *.apk, deploy the *.apk to a mobile device. 
+* If you prefer to use an emulator, you can create any Android virtual device from Android Virtual Device Manager, please be sure to use API level 18 or above and choose a device with bigger screen.
+* Open the App on android device or emulator, click [Get Token] >> token should appear in the text box below
+* Input bucket name in text box under [create bucket], click [Create Bucket] >> wait for the success info. The bucket key (i.e. bucket name) must match “^[-_.a-z0-9]{3,128}$”. That is bucket must be between 3 to 128 characters long and contain only lower-case letters, numbers and the symbols . _ –.  And bucket keys must be unique within the data center or region in which they were created. Best practice is to incorporate your company name/domain name or the client Id into the bucket name. If you prefer to use the client Id(should convert to lower-case first) as part of bucket name, please note that it is the consumer key, not the secret key.  Please also pay attention to the length of the whole bucket name, which should be less than 128.
 * Click [Browser Model], the files available in the storage folder will appear >> select one of them
 * Click [Upload Model], wait for the success info >> the urn will appear in the text box below
 * Click [Register Model] >> wait for the success info >> the text below will show the register status
