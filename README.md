@@ -28,11 +28,11 @@ This is a sample for Android devices demoing workflow of using Autodesk View and
 * If you prefer to use an emulator, you can create any Android virtual device from Android Virtual Device Manager, please be sure to use API level 18 or above and choose a device with bigger screen.
 * Open the App on android device or emulator, click [Get Token] >> token should appear in the text box below
 * Input bucket name in text box under [create bucket], click [Create Bucket] >> wait for the success info. The bucket key (i.e. bucket name) must match “^[-_.a-z0-9]{3,128}$”. That is bucket must be between 3 to 128 characters long and contain only lower-case letters, numbers and the symbols . _ –.  And bucket keys must be unique within the data center or region in which they were created. Best practice is to incorporate your company name/domain name or the client Id into the bucket name. If you prefer to use the client Id(should convert to lower-case first) as part of bucket name, please note that it is the consumer key, not the secret key.  Please also pay attention to the length of the whole bucket name, which should be less than 128.
-* Click [Browser Model], the files available in the storage folder will appear >> select one of them
-* Click [Upload Model], wait for the success info >> the urn will appear in the text box below
-* Click [Register Model] >> wait for the success info >> the text below will show the register status
-* Click [show thumbnail] >> the thumbnail will appear in the image box. sometimes you would need to wait a moment and click it again as transition might not have completed.
-* Click [Launch Viewer] >> select a browser, the model will be displayed in it. This test uses Chrome (version 38.0.2125.114), while you can try to load the model using any browser that is WebGL compatible.
+* Click [Browser Model] to show available test file list, choose one of them
+* Click [Upload Model] to upload the model file, the URN appears in the text box below once file is uploaded.
+* Click [Register Model] to register the model for translation, status shows up in text box below, it says "Register Status: 200" if everything is OK.
+* Click [Show thumbnail] to get the thumbnail and display it in the image box blow. You may see "get thumbnail failed" if translation is still not in progress, you can try again latter. 
+* Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. It is tested on Google Chrome for Android (version 38.0.2125.114), while you can try any browser that is WebGL compatible. If you have problems with this step, you can look into console of browser with USB debugging. If you are using emulator, you will see a blank web page as the browser in emulator does not support WebGL.
 
  
 ## License
