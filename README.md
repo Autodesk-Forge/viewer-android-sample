@@ -1,10 +1,8 @@
 #Autodesk View and Data API workflow sample for Android
 
-[![build status](https://api.travis-ci.org/cyrillef/extract-view.and.data.api.png)](https://travis-ci.org/cyrillef/extract-view.and.data.api)
-[![Node.js](https://img.shields.io/badge/Node.js-0.12.4-blue.svg)](https://nodejs.org/)
-[![npm](https://img.shields.io/badge/npm-2.10.1-blue.svg)](https://www.npmjs.com/)
+
 [![LMV](https://img.shields.io/badge/View%20%26%20Data%20API-v1.2.23-green.svg)](http://developer-autodesk.github.io/)
-![Platforms](https://img.shields.io/badge/platform-windows%20%7C%20osx%20%7C%20linux-lightgray.svg)
+[![Android](https://img.shields.io/badge/platform-android-green.svg)](https://www.android.com/)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 
 ##Description
@@ -50,4 +48,5 @@ This sample is licensed under the terms of the [MIT License](http://opensource.o
 ##Written by 
 
 Xiaodong Liang
+Autodesk Forge
 
