@@ -21,6 +21,11 @@ This is a sample for Android devices demoing workflow of using Autodesk View and
 * Make sure the necessary *.jar in libs are available, which are already included in the project.
 * Make sure to provide test models in res\raw before building the app. The package in this repository has provided a model called testmodel.nwd. These files will be copied to the storage of the mobile at <SD card root>/ADNAndroidTestView when the app is being launched. 
 
+##Live demo at
+download ADNAndroidTestView.apk_ and rename to ADNAndroidTestView.apk. Then install it on Android. After installing, run the app 'ADNAndroidTestView'
+
+[![](ADNAndroidSample/assets/androiddemo.png)]
+
 ##Setup/Usage Instructions
 
 * Download and install Eclipse and [Android Development Tool-kit](http://developer.android.com/sdk/installing/installing-adt.html#Configure);
@@ -39,7 +44,7 @@ This is a sample for Android devices demoing workflow of using Autodesk View and
 * Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. It is tested on Google Chrome for Android (version 38.0.2125.114), while you can try any browser that is WebGL compatible. If you have problems with this step, you can look into console of browser with USB debugging. If you are using emulator, you will see a blank web page as the browser in emulator does not support WebGL.
 
 
-[![](ADNAndroidSample/assets/androiddemo.png)]
+
  
 ## License
 
