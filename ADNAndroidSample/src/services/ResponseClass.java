@@ -17,21 +17,35 @@ public class ResponseClass {
 
 	}
 	
+	//v2 format
+	//https://developer.autodesk.com/api/view-and-data-api/#api-features
 	public class srv_bucket_class {
 		
-		 @SerializedName("objects")
-		    public srv_bucket_object_class objects[]; 
+		 @SerializedName("objectId")
+		 	public String objectId; 
+		 @SerializedName("bucketKey")
+		 	public String bucketKey; 
+		 @SerializedName("location")
+		 	public String location; 
 	}
 	
-	public class srv_bucket_object_class {
+	//v1 format; retired
+	//public class srv_bucket_class {
 		
-		 @SerializedName("id")
-		    public String id; 
-		 @SerializedName("location")
-		    public String location; 
+	//	 @SerializedName("objects")
+	//	    public srv_bucket_object_class objects[]; 
+	//}
+	
+	//v1 format; retired
+	//public class srv_bucket_object_class {
+		
+	//	 @SerializedName("id")
+	//	    public String id; 
+	//	 @SerializedName("location")
+	//	    public String location; 
 		 
 
-	}
+	//}
 	
 	
 	

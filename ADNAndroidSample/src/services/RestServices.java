@@ -76,7 +76,7 @@ public class RestServices {
 //private static String BASEUrl = "https://developer.api.autodesk.com";
 private static String BASEUrl = main.Credentials.BASEUrl;
 private static String authenticate_srv = "/authentication/v1/authenticate";
-private static String upload_srv = "/oss/v1/buckets";
+private static String upload_srv = "/oss/v2/buckets";
 private static String settoken_srv = "/utility/v1/settoken";
 private static String register_srv = "/viewingservice/v1/register";
 private static String get_urn_thumb_srv = "/viewingservice/v1/thumbnails";
@@ -178,9 +178,10 @@ private static String get_urn_thumb_srv = "/viewingservice/v1/thumbnails";
 			{    
 				 HttpPost request = new HttpPost(BASEUrl+ upload_srv);				 
 				 request.addHeader("Content-Type", "application/json"); 
-				 	 
+				 
+				 //v2 changed the param name from 'policy' to 'policyKey'
 				 String jsonstr  = 
-						 "{\"bucketKey\":\""+ newBucketName + "\", \"servicesAllowed\":{}, \"policy\":\"temporary\"}";
+						 "{\"bucketKey\":\""+ newBucketName + "\", \"servicesAllowed\":{}, \"policyKey\":\"temporary\"}";
 				 HttpEntity jsonent = new StringEntity(jsonstr,HTTP.UTF_8);
 			     request.setEntity(jsonent); 			     
  
@@ -370,8 +371,10 @@ private static String get_urn_thumb_srv = "/viewingservice/v1/thumbnails";
 					 Reader reader = new InputStreamReader(getResponseEntity.getContent());
 					 Gson gson = new Gson();
 					 
+					 //v2 changed the response json structure
+					 
 					 ResponseClass.srv_bucket_class _bucket_cls = gson.fromJson(reader, ResponseClass.srv_bucket_class.class);
-					 String _urn = android.util.Base64.encodeToString(_bucket_cls.objects[0].id.getBytes(),Base64.NO_WRAP);; 
+					 String _urn = android.util.Base64.encodeToString(_bucket_cls.objectId.getBytes(),Base64.NO_WRAP);; 
  
 					 GlobalHelper._currentUrn = _urn;
 			  		 
