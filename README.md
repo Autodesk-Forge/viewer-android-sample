@@ -39,7 +39,7 @@ This is a sample for Android devices demoing workflow of using Autodesk View and
 * Click [Register Model] to register the model for translation, status shows up in text box below, it says "Register Status: 200" if everything is OK.
 * Click [Show thumbnail] to get the thumbnail and display it in the image box blow. You may see "get thumbnail failed" if translation is still not in progress, you can try again latter. 
 * Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. It is tested on Google Chrome for Android (version 38.0.2125.114), while you can try any browser that is WebGL compatible. If you have problems with this step, you can look into console of browser with USB debugging. If you are using emulator, you will see a blank web page as the browser in emulator does not support WebGL.
-*[![](assets/androiddemo.png)]
+*[![](ADNAndroidSample/assets/androiddemo.png)]
  
 ## License
 
