@@ -3,6 +3,7 @@
 
 [![LMV](https://img.shields.io/badge/View%20%26%20Data%20API-v1.2.23-green.svg)](http://developer-autodesk.github.io/)
 [![Android](https://img.shields.io/badge/platform-android-green.svg)](https://www.android.com/)
+[![Ecllipse + ADT ](https://img.shields.io/badge/Ecllipse%2BADT-2014--03--21-yellowgreen.svg)](http://geeksandroids.blogspot.com/2014/06/android-sdk-installations.html)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 
 ##Description
@@ -18,6 +19,7 @@ This is a sample for Android devices demoing workflow of using Autodesk View and
 
 ##Dependencies
 
+* The sample is pproduced on [adt-bundle-windows-x86_64-20140321](http://geeksandroids.blogspot.com/2014/06/android-sdk-installations.html) which contains Ecllipse and ADT. It should also work in latest version, but has not yet tested.  
 * Make sure the necessary *.jar in libs are available, which are already included in the project.
 * Make sure to provide test models in res\raw before building the app. The package in this repository has provided a model called testmodel.nwd. These files will be copied to the storage of the mobile at <SD card root>/ADNAndroidTestView when the app is being launched. 
 
