@@ -1,34 +1,54 @@
-#Autodesk View and Data API workflow sample for Android
+# Autodesk View and Data API workflow sample for Android
 
-
-[![LMV](https://img.shields.io/badge/View%20%26%20Data%20API-v1.2.23-green.svg)](http://developer-autodesk.github.io/)
+[![Viewer](https://img.shields.io/badge/Forge%20Viewer-v2.7-green.svg)](http://developer-autodesk.github.io/)
 [![Android](https://img.shields.io/badge/platform-android-green.svg)](https://www.android.com/)
 [![Ecllipse + ADT ](https://img.shields.io/badge/Ecllipse%2BADT-2014--03--21-yellowgreen.svg)](http://geeksandroids.blogspot.com/2014/06/android-sdk-installations.html)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 
-##Description
+Note: For using this sample, you need a valid oAuth credential for the translation / extraction portion. 
+Visit this [page](https://developer.autodesk.com/) for instructions to get on-board.
 
-This is a sample for Android devices demoing workflow of using Autodesk View and Data API:
 
-* Get token and set token
-* Create bucket
-* Upload model
-* Start translation (registration)
-* Get thumbnail of model
-* Display model in the browser
+##Motivation
 
-##Dependencies
+Our Forge Viewer adds powerful 2D and 3D viewing functionality to your web apps. Our REST and JavaScript API makes it
+easier to create applications that can view, zoom and interact with 2D and 3D models from over 60+ model formats with 
+just a web browser, no plug-in required!
 
-* The sample is pproduced on [adt-bundle-windows-x86_64-20140321](http://geeksandroids.blogspot.com/2014/06/android-sdk-installations.html) which contains Ecllipse and ADT. It should also work in latest version, but has not yet tested.  
+
+## Description
+
+This is a sample for Android devices demoing how to translate a 2D/3D file on the Forge platform to be viewed in your browser.
+
+* Get an access token
+* Create a bucket
+* Upload a 2D/3D design file / model
+* Start the model translation (registration)
+* Download the model thumbnail
+* Display the model in your browser
+
+
+## Dependencies
+
+* This sample was tested with [adt-bundle-windows-x86_64-20140321](http://geeksandroids.blogspot.com/2014/06/android-sdk-installations.html) 
+  which contains Ecllipse and ADT. It should also work in latest version, but has not yet tested.  
 * Make sure the necessary *.jar in libs are available, which are already included in the project.
-* Make sure to provide test models in res\raw before building the app. The package in this repository has provided a model called testmodel.nwd. These files will be copied to the storage of the mobile at <SD card root>/ADNAndroidTestView when the app is being launched. 
+* Make sure to provide test models in res\raw before building the app. The package in this repository 
+  has provided a model called testmodel.nwd. These files will be copied to the storage of the mobile 
+  at <SD card root>/ADNAndroidTestView when the app is being launched. 
 
-##Live demo at
-download ADNAndroidTestView.apk_ and rename to ADNAndroidTestView.apk. Then install it on Android. After installing, run the app 'ADNAndroidTestView'
+  
+## APK Demo
+
+* Download [ADNAndroidTestView.apk_](https://raw.githubusercontent.com/Developer-Autodesk/view.and.data-worklflow-android-sample/master/ADNAndroidSample/ADNAndroidTestView.apk_)
+  and rename it to ADNAndroidTestView.apk.
+* Install it on your Android device.
+* Run the app 'ADNAndroidTestView'.
 
 [![](ADNAndroidSample/assets/androiddemo.png)]
 
-##Setup/Usage Instructions
+
+## Setup/Usage Instructions
 
 * Download and install Eclipse and [Android Development Tool-kit](http://developer.android.com/sdk/installing/installing-adt.html#Configure);
 * Download and install Android SDK API 18 or above from Android SDK Manager, this sample targets API 18.
@@ -45,15 +65,16 @@ download ADNAndroidTestView.apk_ and rename to ADNAndroidTestView.apk. Then inst
 * Click [Show thumbnail] to get the thumbnail and display it in the image box blow. You may see "get thumbnail failed" if translation is still not in progress, you can try again latter. 
 * Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. It is tested on Google Chrome for Android (version 38.0.2125.114), while you can try any browser that is WebGL compatible. If you have problems with this step, you can look into console of browser with USB debugging. If you are using emulator, you will see a blank web page as the browser in emulator does not support WebGL.
 
-
-
  
 ## License
 
-This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
+This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). 
+Please see the [LICENSE](LICENSE) file for full details.
 
-##Written by 
 
-Xiaodong Liang
-Autodesk Forge
+## Written by 
+
+Xiaodong Liang <br />
+Developer Advocate <br />
+Autodesk Forge Partner Development
 
