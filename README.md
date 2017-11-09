@@ -45,7 +45,8 @@ This is a sample for Android devices demoing how to translate a 2D/3D file on th
 * Install it on your Android device.
 * Run the app 'ADNAndroidTestView'.
 
-[![](ADNAndroidSample/assets/androiddemo.png)]
+### Thumbnail
+[![thumbnail](ADNAndroidSample/assets/androiddemo.png)]
 
 
 ## Setup/Usage Instructions
