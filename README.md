@@ -1,7 +1,12 @@
 # viewer-android-studio-sample
 Sample on Workflow of Forge Viewer by Android Studio
 ```diff
-- This sample was programmed on Eclipse + ADT. Please get the old commit if you still need the version of Eclipse + ADT.
+NOTE: 
+1. This sample was programmed on Eclipse + ADT. 
+   Please get the old commit if you still need the version of Eclipse + ADT.
+2. Demo APK is not provided as it would ask the user to store customer's model in the author's bucket of Forge
+   which does not apply to the compliance of data protection. So，please build the sample with your own 
+   credential and produce the APK 
 ```
 
 [![Android Studio](https://img.shields.io/badge/Android%20Studio-3.0.1-green.svg)](https://developer.android.com/studio/index.html/)
