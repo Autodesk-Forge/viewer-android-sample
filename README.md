@@ -27,15 +27,15 @@ This is a sample for Android devices demoing how to translate 2D/3D file by Forg
 * Get an access token by [Forge Authentication API] (https://developer.autodesk.com/en/docs/oauth/v2)
 * Create a bucket by [Forge Data Management API](https://developer.autodesk.com/en/docs/data/v2)
 * Upload a 2D/3D design file / model by [Forge Data Management API](https://developer.autodesk.com/en/docs/data/v2)
-* Post a job to translate the model to the Forge Viewer format by [Forge Model Derivative API] (https://developer.autodesk.com/en/docs/model-derivative/v2)
-* Download the model thumbnail by [Forge Model Derivative API] (https://developer.autodesk.com/en/docs/model-derivative/v2)
+* Post a job to translate the model to the Forge Viewer format by [Forge Model Derivative API](https://developer.autodesk.com/en/docs/model-derivative/v2)
+* Download the model thumbnail by [Forge Model Derivative API](https://developer.autodesk.com/en/docs/model-derivative/v2)
 * Display the model in your browser by the workflow of [Forge Viewer](https://developer.autodesk.com/en/docs/viewer/v2/)
 
 ## Setup
 
 * Install [Adroind Studio] (https://developer.android.com/studio/index.html/) and the neccesary API SDK. In this test, [Android API SDK](https://developer.android.com/sdk/download.html) version 28 is installed. 
 * Download and build Forge library by [Forge JAVA SDK](https://github.com/Autodesk-Forge/forge-api-java-client). Copy all *    .jar (except httpcore-4.4.1.jar and httpclient-4.5.jar) in the target>>lib folder to [app>>lib folder](app/libs)of this sample. For convenience, these .jar are already included in the project. However please syncronize with [Forge JAVA SDK](https://github.com/Autodesk-Forge/forge-api-java-client) if it has new commits.
-* Make sure to provide test models in the extension storage of the emulator or physical mobile. To copy a file to emulator, [Android Device Monitor](https://developer.android.com/studio/profile/monitor.html) can be used. Or, copy by [adb in command line](https://stackoverflow.com/questions/30434451/how-to-push-files-to-an-emulator-instance-using-android-studio). A test model has been provided a model at [demomodel/RevitNative.rvt].  
+* Make sure to provide test models in the extension storage of the emulator or physical mobile. To copy a file to emulator, [Android Device Monitor](https://developer.android.com/studio/profile/monitor.html) can be used. Or, copy by [adb in command line](https://stackoverflow.com/questions/30434451/how-to-push-files-to-an-emulator-instance-using-android-studio). A test model has been provided at [demomodel/RevitNative.rvt].  
 * Visit the [Forge Developer Portal](https://developer.autodesk.com), sign up for an account, then [create an app](https://developer.autodesk.com/myapps/create).Copy API key and secret to line 15 and line 16 in [Global.java](app/src/main/java/com/autodesk/forge/forgeviewer_android_sample/Global.java)
 * Build the app and fix any errors 
 
