@@ -1,5 +1,8 @@
 # viewer-android-studio-sample
 Sample on Workflow of Forge Viewer by Android Studio
+```diff
+- This sample was programmed on Eclipse + ADT. Please get the old commit if you still need the version of Eclipse + ADT.
+```
 
 [![Android Studio](https://img.shields.io/badge/Android%20Studio-3.0.1-green.svg)](https://developer.android.com/studio/index.html/)
 [![Android SDK](https://img.shields.io/badge/Android%20SDK-27-red.svg)](https://developer.android.com/sdk/download.html)
@@ -29,14 +32,7 @@ This is a sample for Android devices demoing how to translate 2D/3D file by Forg
 * Download and build Forge library by [Forge JAVA SDK](https://github.com/Autodesk-Forge/forge-api-java-client). Copy all *    .jar (except httpcore-4.4.1.jar and httpclient-4.5.jar) in the target>>lib folder to [app>>lib folder](app/libs)of this sample. For convenience, these .jar are already included in the project. However please syncronize with [Forge JAVA SDK](https://github.com/Autodesk-Forge/forge-api-java-client) if it has new commits.
 * Make sure to provide test models in the extension storage of the emulator or physical mobile. To copy a file to emulator, [Android Device Monitor](https://developer.android.com/studio/profile/monitor.html) can be used. Or, copy by [adb in command line](https://stackoverflow.com/questions/30434451/how-to-push-files-to-an-emulator-instance-using-android-studio). A test model has been provided a model at [demomodel/RevitNative.rvt].  
 * Visit the [Forge Developer Portal](https://developer.autodesk.com), sign up for an account, then [create an app](https://developer.autodesk.com/myapps/create).Copy API key and secret to line 15 and line 16 in [Global.java](app/src/main/java/com/autodesk/forge/forgeviewer_android_sample/Global.java)
-* Build the app and fix any errors
-
-## APK Demo
-
-* Download [ForgeAndroidTestView.apk_]()
-  and rename it to ForgeAndroidTestView.apk.
-* Install it on your Android device.
-* Run the app 'ForgeAndroidTestView'.
+* Build the app and fix any errors 
 
 ## Usage
 * Open the App on android device or emulator, click [Get Token] >> token should appear in the text box.
