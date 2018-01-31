@@ -46,7 +46,7 @@ This is a sample for Android devices demoing how to translate 2D/3D file by Forg
 * Click [Upload Model] to upload the model file, the URN appears in the text box  once file is uploaded.
 * Click [Post Job] to send a job to translate the model, status shows up in text box.
 * Once the translation status is completed, click [Show thumbnail] to get the thumbnail and display it in the image box blow. You may see "get thumbnail failed" if translation is still not in progress, you can try again latter. 
-* Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. It is tested on the default browser of the device. If you have problems with this step, you can look into console of browser with USB debugging.  
+* Click [Launch Viewer] to launch the viewer in a WebGL enabled browser. [The code](https://github.com/Autodesk-Forge/viewer-android-sample/blob/master/app/src/main/java/com/autodesk/forge/forgeviewer_android_sample/MainActivity.java#L160) taks advantage of a demo website by inputing the token and urn, then the demo website will launch the viewer. the workflow could be repalced with any other [demo website](https://models.autodesk.io/view.html) or your own website if it follows the format that inputs token and urn. It is tested on the default browser of the device. If you have problems with this step, you can look into console of browser with USB debugging.  
 
 ## License
 
